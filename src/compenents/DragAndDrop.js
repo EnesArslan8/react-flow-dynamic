@@ -10,20 +10,24 @@ import ReactFlow, {
 import "reactflow/dist/style.css";
 
 import Sidebar from "./DragAndDropMenu";
+import CustomNode from "./CustomNode";
+import DefaultNode from "./DefaultNode";
+import InputNode from "./InputNode";
+import OutputNode from './OutputNode';
+import TargetCustomNode from "./TargetCustomNode";
+
+
+const nodeTypes={
+  input:InputNode,
+  default:DefaultNode,
+  output:OutputNode,
+  custom:CustomNode,
+  targetCustom:TargetCustomNode
+}
+
 
 const initialNodes = [
-  {
-    id: "1",
-    type: "input",
-    data: { label: "input node" },
-    position: { x: 250, y: 5 },
-  },
-  {
-    id: "2",
-    type: "input",
-    data: { label: "input node" },
-    position: { x: 350, y: 5 },
-  },
+
 ];
 
 let id = 0;
@@ -47,10 +51,10 @@ const DnDFlow = () => {
 
   const onDrop = useCallback(
     (event) => {
-      event.preventDefault();
+      event?.preventDefault();
 
       const reactFlowBounds = reactFlowWrapper.current.getBoundingClientRect();
-      const type = event.dataTransfer.getData("application/reactflow");
+      const type = event?.dataTransfer?.getData("application/reactflow");
 
       // check if the dropped element is valid
       if (typeof type === "undefined" || !type) {
@@ -87,9 +91,10 @@ const DnDFlow = () => {
             onDrop={onDrop}
             onDragOver={onDragOver}
             fitView
+            nodeTypes={nodeTypes}
           >
             <Controls />
-            <Panel position="top-center">Drag And Drop</Panel>
+            <Panel position="top-center"><p className="dragTitle">Drag And Drop</p></Panel>
           </ReactFlow>
         </div>
         <Sidebar />

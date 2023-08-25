@@ -1,4 +1,4 @@
-.App{
+.App {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -17,10 +17,40 @@
   background: #fcfcfc;
 }
 
+.nodeText {
+  font-size: 15px;
+  padding: 5px 10px;
+}
+.customNodeContainer {
+  height: 100px;
+  width: 100px;
+  transform: rotate(45deg);
+}
+.rotateContent {
+  transform: rotate(-45deg);
+  color: #fcfcfc;
+}
+.customNodeContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: orange;
+}
+.customNodeContent.target {
+  color: #fcfcfc;
+  background-color: darkred;
+}
 .dndflow aside .description {
   margin-bottom: 10px;
 }
-
+.dragTitle{
+  font-size: 34px; 
+  white-space: nowrap;
+  margin-top: 0px;
+}
 .dndflow .dndnode {
   height: 20px;
   padding: 4px;
@@ -32,15 +62,39 @@
   align-items: center;
   cursor: grab;
 }
-
+.react-flow__node-default, .react-flow__node-input, .react-flow__node-output, .react-flow__node-group{
+  padding: 0 !important;
+}
 .dndflow .dndnode.input {
-  border-color: #0041d0;
+  background-color: #0041d0;
+  border: 1px solid #0000a0 !important;
+  color: #fcfcfc;
+}
+.inputNode {
+  background-color: #0041d0;
+  border: 1px solid #0000a0 !important;
+  color: #fcfcfc;
+}
+.outputNode {
+  background-color: #cc9972;
+  border: 1px solid #aa9922 !important;
+  color: #fcfcfc;
+}
+.defaultNode{
+  background-color: #777;
+  border: 1px solid #444 !important;
+  color: #fcfcfc;
 }
 
 .dndflow .dndnode.output {
-  border-color: #ff0072;
+  border-color: #cc9972;
 }
-
+.dndflow .dndnode.custom {
+  border-color: orange;
+}
+.dndflow .dndnode.targetCustom {
+  border-color: darkred;
+}
 .dndflow .reactflow-wrapper {
   flex-grow: 1;
   height: 100vh;
