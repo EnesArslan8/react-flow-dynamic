@@ -18,7 +18,7 @@ export default () => {
         Input Node
       </div>
       <div
-        className="dndnode"
+        className="dndnode default"
         onDragStart={(event) => onDragStart(event, "default")}
         draggable
       >
