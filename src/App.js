@@ -6,11 +6,14 @@ import NodeContextMenu from './compenents/NodeContextMenu'
 function App() {
   return (
     <div className="App">
-      <div className="dragAndDrop">
-        <DragAndDrop />
-      </div>
       <div className="nodeContextMenu">
+        {/* <DragAndDrop /> */}
         <NodeContextMenu/>
+
+      </div>
+      <div className="dragAndDrop">
+        <DragAndDrop/>
+        {/* <NodeContextMenu/> */}
       </div>
       <div className="">
         {/* <DragAndDrop /> */}

@@ -5,16 +5,44 @@ import ReactFlow, {
   Panel,
   useEdgesState,
   addEdge,
+  MarkerType,
 } from "reactflow";
 import ContextMenu from "./ContextMenu";
 
 import "reactflow/dist/style.css";
 
+const customStyle = {
+  width: 200,
+  height: 50,
+  backgroundColor: 'blue',
+  display:'flex',
+  justifyContent:'center',
+  alignItems:'center',
+  fontSize:14,
+  color:'#fff',
+  fontWeight:600
+};
+const customStyle2 = {
+    width: 200,
+    height: 50,
+    backgroundColor: '#000',
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    fontSize:14,
+    color:'#fff',
+    fontWeight:600
+  };
 const initialNodes = [
-  { id: "1", position: { x: 175, y: 0 }, data: { label: "a" } },
-  { id: "2", position: { x: 0, y: 250 }, data: { label: "b" } },
-  { id: "3", position: { x: 175, y: 250 }, data: { label: "c" } },
-  { id: "4", position: { x: 350, y: 250 }, data: { label: "d" } },
+  {
+    id: "1",
+    position: { x: 175, y: 0 },
+    data: { label: "Nasılsın ?" },
+    style: customStyle,
+  },
+  { id: "2", position: { x: 0, y: 250 }, data: { label: "İyiyim" } ,style:customStyle2},
+  { id: "3", position: { x: 70, y: 350 }, data: { label: "İdare eder" },style:customStyle2 },
+  { id: "4", position: { x: 140, y: 450 }, data: { label: "Hiç sorma..." } ,style:customStyle2},
 ];
 
 const initialEdges = [
@@ -35,6 +63,19 @@ const initialEdges = [
   },
 ];
 
+const edgeOptions = {
+  animated: true,
+  type: "simplebezier",
+  style: {
+    stroke: "#cc9972",
+  },
+  markerEnd: {
+    fontSize: "20px",
+    // color:'000',
+    type: MarkerType.ArrowClosed,
+  },
+};
+
 const Flow = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
@@ -54,17 +95,9 @@ const Flow = () => {
       // Calculate position of the context menu. We want to make sure it
       // doesn't get positioned off-screen.
       const pane = ref.current.getBoundingClientRect();
-      console.log(pane)
-      console.log(event.clientX)
-      console.log(event.clientY)
       setMenu({
         id: node.id,
-        // top: event.clientY <= pane.height - 200 && event.clientY,
-        // left: event.clientX < pane.width - 200 && event.clientX,
-        // right: event.clientX >= pane.width - 200 && pane.width - event.clientX,
-        // bottom:
-        //   event.clientY >= pane.height - 200 && pane.height - event.clientY,
-        top: event.clientX <= pane.height -200 && event.clientY,
+        top: event.clientY <= pane.height - 200 && event.clientY,
         left: event.clientX < pane.width - 200 && event.clientX,
         right: event.clientX >= pane.width - 200 && pane.width - event.clientX,
         bottom:
@@ -87,15 +120,21 @@ const Flow = () => {
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
         onPaneClick={onPaneClick}
+        defaultEdgeOptions={edgeOptions}
         onNodeContextMenu={onNodeContextMenu}
         fitView
+        // nodeTypes={nodeTypes}
       >
-        <Panel position="top-center">
+        <Panel position="top-center" style={{width:'100%',textAlign:'center',marginLeft:'auto',marginTop:'auto'}}>
           <p className="dragTitle">Node Context Menu</p>
         </Panel>
         {/* <Background /> */}
         {menu && <ContextMenu onClick={onPaneClick} {...menu} />}
+        <Panel style={{background:'pink',width:'100%',marginLeft:'auto',marginBottom:'auto'}} position="bottom-center">
+          <p style={{color:'brown',fontWeight:900,background:'rgba(255,255,255,.6)',textAlign:'center'}}>You can add node or delete node</p>
+        </Panel>
       </ReactFlow>
+      
     </div>
   );
 };
