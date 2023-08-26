@@ -5,6 +5,7 @@ import ReactFlow, {
   useNodesState,
   useEdgesState,
   Controls,
+  MarkerType,
   Panel,
 } from "reactflow";
 import "reactflow/dist/style.css";
@@ -77,6 +78,19 @@ const DnDFlow = () => {
     [reactFlowInstance]
   );
 
+  const edgeOptions = {
+    animated: true,
+    type:'smoothstep',
+    style: {
+      stroke: "#888",
+    },
+    markerEnd: {
+      fontSize: "20px",
+      // color:'000',
+      type: MarkerType.ArrowClosed
+    },
+  };
+
   return (
     <div className="dndflow">
       <ReactFlowProvider>
@@ -92,6 +106,7 @@ const DnDFlow = () => {
             onDragOver={onDragOver}
             fitView
             nodeTypes={nodeTypes}
+            defaultEdgeOptions={edgeOptions}
           >
             <Controls />
             <Panel position="top-center"><p className="dragTitle">Drag And Drop</p></Panel>

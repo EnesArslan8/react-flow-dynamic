@@ -9,7 +9,41 @@
   width: 33.3vw;
   height: 100%;
 }
+.nodeContextMenu{
+  flex-direction: column;
+  display: flex;
+  width: 33.3vw;
+  height: 100%;
+}
+.contextMenu{
+  flex-direction: column;
+  display: flex;
+  width: 33.3vw;
+  height: 100%;
+  border-right: 1px solid #dcdcdc;
+}
 
+.context-menu {
+  background: black;
+  border-style: solid;
+  box-shadow: 10px 19px 20px rgba(0, 0, 0, 10%);
+  position: absolute;
+  color: #fff;
+  z-index: 10;
+}
+
+.context-menu button {
+  border: none;
+  display: block;
+  padding: 0.5em;
+  text-align: left;
+  width: 100%;
+}
+
+.context-menu button:hover {
+  background: white;
+}
+/***/
 .dndflow aside {
   border-right: 1px solid #eee;
   padding: 15px 10px;
@@ -50,6 +84,7 @@
   font-size: 34px; 
   white-space: nowrap;
   margin-top: 0px;
+  background-color: rgba(255, 255, 255, .3);
 }
 .dndflow .dndnode {
   height: 20px;
