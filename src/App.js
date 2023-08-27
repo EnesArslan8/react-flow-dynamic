@@ -1,22 +1,20 @@
 import "./App.css";
 import React from "react";
 import DragAndDrop from "./compenents/DragAndDrop.js";
-import NodeContextMenu from './compenents/NodeContextMenu'
+import NodeContextMenu from "./compenents/NodeContextMenu";
+import DagreTree from "./compenents/DagreTree";
 
 function App() {
   return (
     <div className="App">
       <div className="nodeContextMenu">
-        {/* <DragAndDrop /> */}
-        <NodeContextMenu/>
-
+        <NodeContextMenu />
       </div>
       <div className="dragAndDrop">
-        <DragAndDrop/>
-        {/* <NodeContextMenu/> */}
+        <DragAndDrop />
       </div>
-      <div className="">
-        {/* <DragAndDrop /> */}
+      <div className="dagreTree">
+        <DagreTree />
         {/* <p>Dagre Tree</p> */}
       </div>
     </div>

@@ -109,7 +109,7 @@ const DnDFlow = () => {
             defaultEdgeOptions={edgeOptions}
           >
             <Controls />
-            <Panel position="top-center"><p className="dragTitle">Drag And Drop</p></Panel>
+            <Panel style={{width:'100%',textAlign:'center',marginLeft:'auto',marginTop:'auto'}} position="top-center"><p className="dragTitle">Drag And Drop</p></Panel>
           </ReactFlow>
         </div>
         <Sidebar />
