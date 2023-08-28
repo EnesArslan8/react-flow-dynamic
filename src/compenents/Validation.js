@@ -57,7 +57,7 @@ const ValidationFlow = () => {
       fitView
       attributionPosition="bottom-left"
     >
-      <Panel style={{width:'100%',textAlign:'center',marginLeft:'auto',marginTop:'auto'}} position="top-center"><p className="dragTitle">Validation</p></Panel>
+      <Panel style={{width:'100%',textAlign:'center',marginLeft:'auto',marginTop:'auto'}} position="top-center"><p className="dragTitle" style={{borderBottom:'1px solid #acacac'}}>Validation</p></Panel>
     </ReactFlow>
   );
 };

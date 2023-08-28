@@ -126,7 +126,7 @@ const Flow = () => {
         // nodeTypes={nodeTypes}
       >
         <Panel position="top-center" style={{width:'100%',textAlign:'center',marginLeft:'auto',marginTop:'auto'}}>
-          <p className="dragTitle">Node Context Menu</p>
+          <p className="dragTitle" style={{borderBottom:'1px solid #acacac'}}>Node Context Menu</p>
         </Panel>
         {/* <Background /> */}
         {menu && <ContextMenu onClick={onPaneClick} {...menu} />}
