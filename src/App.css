@@ -9,6 +9,10 @@
   width: 33.3vw;
   height: 100%;
 }
+.validation{
+  width: 99.9vw;
+  height: 100%;
+}
 .nodeContextMenu{
   flex-direction: column;
   display: flex;

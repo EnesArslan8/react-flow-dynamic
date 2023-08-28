@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import DragAndDrop from "./compenents/DragAndDrop.js";
 import NodeContextMenu from "./compenents/NodeContextMenu";
+import Validation from "./compenents/Validation";
 function App() {
   return (
     <div className="App">
@@ -12,7 +13,7 @@ function App() {
         <DragAndDrop />
       </div>
       <div className="validation">
-        
+        <Validation/>
       </div>
     </div>
   );
