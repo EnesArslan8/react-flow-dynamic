@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import ReactFlow, { useNodesState, useEdgesState, addEdge, Handle, Position } from 'reactflow';
+import ReactFlow, { useNodesState, useEdgesState, addEdge, Handle, Position ,Panel} from 'reactflow';
 
 import 'reactflow/dist/style.css';
 
@@ -56,7 +56,9 @@ const ValidationFlow = () => {
       onConnectEnd={onConnectEnd}
       fitView
       attributionPosition="bottom-left"
-    />
+    >
+      <Panel style={{width:'100%',textAlign:'center',marginLeft:'auto',marginTop:'auto'}} position="top-center"><p className="dragTitle">Validation</p></Panel>
+    </ReactFlow>
   );
 };
 
