@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# React Flow Projesi
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bu proje, React Flow kütüphanesi kullanılarak geliştirilen bir frontend uygulamasını içermektedir. Uygulama, farklı özellikleri kullanarak bir akış diyagramı oluşturmayı amaçlamaktadır. İşte projenizin temel bilgileri:
 
-## Available Scripts
+## Özellikler
 
-In the project directory, you can run:
+- **Node Context Menu Özelliği**: Diyagramdaki düğümler için sağ tıklama menüsü eklenmiştir, bu menü aracılığıyla çeşitli işlemler gerçekleştirilebilir.
 
-### `npm start`
+- **Drag and Drop Özelliği**: Diyagrama yeni düğümler eklemek için sürükle ve bırak yöntemi kullanılmıştır.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Validation Özelliği**: Eklenen düğümlerin geçerliliği kontrol edilir ve uygun olmayan düğümler işaretlenir veya kullanıcıya geri bildirim sağlanır.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Kullanılan Teknolojiler
 
-### `npm test`
+- **React**: Kullanıcı arayüzü oluşturmak için React kütüphanesi kullanılmıştır.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React Flow**: Akış diyagramını oluşturmak ve özellikleri uygulamak için React Flow kütüphanesi entegre edilmiştir.
 
-### `npm run build`
+- **Yarn veya npm**: Projeyi yönetmek ve bağımlılıkları yönetmek için Yarn veya npm kullanılabilir.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Başlangıç
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Projeyi bu depodan klonlayın: git clone https://github.com/EnesArslan8/react-flow-dynamic.git
 
-### `npm run eject`
+2. Proje dizinine gidin: cd react-dynamic
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Gerekli bağımlılıkları yüklemek için terminalde yandaki komutu çalıştırın: npm install veya yarn install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Uygulamayı başlatmak için yandaki komutu kullanın: npm start veya yarn start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Tarayıcınızda uygulamayı görüntülemek için [http://localhost:3000](http://localhost:3000) adresine gidin.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Ekran Görüntüleri
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img src='https://github.com/EnesArslan8/react-flow-dynamic/assets/89355402/5730166a-1104-41a7-9bff-1f59bcac4e49' alt='node context menu' width="300" height="400"/>
+<img src='https://github.com/EnesArslan8/react-flow-dynamic/assets/89355402/12d91aa0-5377-4add-8f43-f926782a2bec' alt='drag and drop' width="300" height="400"/>
+<img src='https://github.com/EnesArslan8/react-flow-dynamic/assets/89355402/485faf09-7ac2-4b3b-ba1b-71d58c04ba24' alt='node context menu' width="300" height="400"/>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src='https://github.com/EnesArslan8/react-flow-dynamic/assets/89355402/9e025afb-cb8b-40c2-b5c2-c41dc3e9bed0'  />
 
-### Code Splitting
+## Katkı
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Proje geliştirmeye katkıda bulunmak isterseniz, "Fork & Pull Request" yöntemini kullanabilirsiniz. Lütfen değişikliklerinizi açıklamayı unutmayın.
 
-### Analyzing the Bundle Size
+## Kaynakça
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [React Flow Dokümantasyon](https://reactflow.dev/)
+- [React Dokümantasyon](https://reactjs.org/docs/getting-started.html)
 
-### Making a Progressive Web App
+Bu proje için emek veren herkese teşekkür ederim!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
