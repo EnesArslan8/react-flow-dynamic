@@ -1,56 +1,57 @@
-# React Flow Projesi
+# React Flow Project
 
-Bu proje, React Flow kütüphanesi kullanılarak geliştirilen bir frontend uygulamasını içermektedir. Uygulama, farklı özellikleri kullanarak bir akış diyagramı oluşturmayı amaçlamaktadır. İşte projenizin temel bilgileri:
+This project encompasses a frontend application developed using the React Flow library. The application aims to create a flow diagram with various features. Here are the fundamental details of your project:  
 
-## Özellikler
+## Features
 
-- **Node Context Menu Özelliği**: Diyagramdaki düğümler için sağ tıklama menüsü eklenmiştir, bu menü aracılığıyla çeşitli işlemler gerçekleştirilebilir.
+- **Node Context Menu Feature**: A right-click context menu has been added for nodes in the diagram, enabling various operations.
 
-- **Drag and Drop Özelliği**: Diyagrama yeni düğümler eklemek için sürükle ve bırak yöntemi kullanılmıştır.
+- **Drag and Drop Feature**: The drag-and-drop method has been employed to add new nodes to the diagram.
 
-- **Validation Özelliği**: Eklenen düğümlerin geçerliliği kontrol edilir ve uygun olmayan düğümler işaretlenir veya kullanıcıya geri bildirim sağlanır.
+- **Validation Feature**: The validity of added nodes is checked, and inappropriate nodes are flagged or user feedback is provided.
 
-## Kullanılan Teknolojiler
+## Technologies Used
 
-- **React**: Kullanıcı arayüzü oluşturmak için React kütüphanesi kullanılmıştır.
+- **React**: The React library is used for creating the user interface.
 
-- **React Flow**: Akış diyagramını oluşturmak ve özellikleri uygulamak için React Flow kütüphanesi entegre edilmiştir.
+- **React Flow**: The React Flow library is integrated to build the flow diagram and implement its features.
 
-- **Yarn veya npm**: Projeyi yönetmek ve bağımlılıkları yönetmek için Yarn veya npm kullanılabilir.
+- **Yarn veya npm**: Yarn or npm can be used to manage the project and its dependencies.
 
-## Başlangıç
+## Getting Started
 
-Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
+To run the project on your local machine, you can follow the steps below:
 
-1. Projeyi bu depodan klonlayın: git clone https://github.com/EnesArslan8/react-flow-dynamic.git
+1. Clone the project from this repository: git clone https://github.com/EnesArslan8/react-flow-dynamic.git
 
-2. Proje dizinine gidin: cd react-dynamic
+2. Navigate to the project directory: cd react-dynamic
 
-3. Gerekli bağımlılıkları yüklemek için terminalde yandaki komutu çalıştırın: npm install veya yarn install
+3. Install the necessary dependencies by running the following command in the terminal: npm install veya yarn install
 
-4. Uygulamayı başlatmak için yandaki komutu kullanın: npm start veya yarn start
+4. Use the following command to start the application: npm start veya yarn start
 
-5. Tarayıcınızda uygulamayı görüntülemek için [http://localhost:3000](http://localhost:3000) adresine gidin.
+5. To view the application in your browser, go to [http://localhost:3000](http://localhost:3000).
 
-## Ekran Görüntüleri
-
+## Screenshots
 
 <img src='https://github.com/EnesArslan8/react-flow-dynamic/assets/89355402/5730166a-1104-41a7-9bff-1f59bcac4e49' alt='node context menu' width="300" height="400"/>
+
 <img src='https://github.com/EnesArslan8/react-flow-dynamic/assets/89355402/12d91aa0-5377-4add-8f43-f926782a2bec' alt='drag and drop' width="300" height="400"/>
+
 <img src='https://github.com/EnesArslan8/react-flow-dynamic/assets/89355402/485faf09-7ac2-4b3b-ba1b-71d58c04ba24' alt='node context menu' width="300" height="400"/>
 
 <img src='https://github.com/EnesArslan8/react-flow-dynamic/assets/89355402/9e025afb-cb8b-40c2-b5c2-c41dc3e9bed0'  />
 
-## Katkı
+## Contribution
 
-Proje geliştirmeye katkıda bulunmak isterseniz, "Fork & Pull Request" yöntemini kullanabilirsiniz. Lütfen değişikliklerinizi açıklamayı unutmayın.
+If you'd like to contribute to the project's development, you can use the "Fork & Pull Request" method. Please don't forget to provide explanations for your changes.
 
-## Kaynakça
+## References
 
 - [React Flow Dokümantasyon](https://reactflow.dev/)
 - [React Dokümantasyon](https://reactjs.org/docs/getting-started.html)
 
-Bu proje için emek veren herkese teşekkür ederim!
+A big thanks to everyone who contributed to this project!
 
 
 
